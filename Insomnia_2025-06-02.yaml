@@ -1,0 +1,174 @@
+type: collection.insomnia.rest/5.0
+name: Parcial2
+meta:
+  id: wrk_67e87d6fedd64ac3a15bbc7f3a47928a
+  created: 1748915089035
+  modified: 1748915089035
+collection:
+  - url: localhost:8088/books
+    name: Create book
+    meta:
+      id: req_cd71cfc276db4dac84da7767b3d388d9
+      created: 1748915094233
+      modified: 1748917061093
+      isPrivate: false
+      sortKey: -1748915094233
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title": "Eso",
+        	"author": "Estefano Rey",
+        	"isbn": "978-1-45698-123-4",
+        	"publicationYear": 2004,
+        	"language": "german",
+        	"pages": 11,
+        	"genre": "love"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8088/books
+    name: Modify book
+    meta:
+      id: req_66a466af992141c9baac745a67801891
+      created: 1748916043651
+      modified: 1748916632069
+      isPrivate: false
+      sortKey: -1748916043651
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id": "33eb9fb1-7dcd-4306-b0ec-8092e42b2d22",
+        	"language": "french",
+        	"title": "Eui"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8088/books
+    name: Get By params
+    meta:
+      id: req_95fcafff75234312b824e84a9e5b78da
+      created: 1748916332251
+      modified: 1748917025195
+      isPrivate: false
+      sortKey: -1748916332251
+    method: GET
+    parameters:
+      - id: pair_f1316dd736a446c2a3a6fef192f02545
+        name: author
+        value: Estefano Rey
+        disabled: true
+      - id: pair_352a9e96e15c4cf69f3faa8418141806
+        name: language
+        value: german
+        disabled: true
+      - id: pair_b2b03e4cab064c3eb87cfaf1b0f10aea
+        name: genre
+        value: love
+        disabled: true
+      - id: pair_866785019f38452aa00c3fc2e1fc09a4
+        name: minPages
+        value: "10"
+        disabled: false
+      - id: pair_a570c530a1bc4f438552b48a88304a1a
+        name: maxPages
+        value: "12"
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8088/books/978-1-45698-123-4
+    name: Get By isbn
+    meta:
+      id: req_dae04ba628014d96a1f246ddcac64b3d
+      created: 1748917028794
+      modified: 1748917065304
+      isPrivate: false
+      sortKey: -1748917028794
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8088/books?id=44dff427-ffac-4f6f-8eb9-9059fca6350e
+    name: Delete book
+    meta:
+      id: req_dc80dee4e1614d11afe1df1b39dbebf8
+      created: 1748917259742
+      modified: 1748917345568
+      isPrivate: false
+      sortKey: -1748917259742
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	
+        	"id": "44dff427-ffac-4f6f-8eb9-9059fca6350e",
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_de9f74697b686088ad9824070076d27246d49048
+    created: 1748915089048
+    modified: 1748915089048
+environments:
+  name: Base Environment
+  meta:
+    id: env_de9f74697b686088ad9824070076d27246d49048
+    created: 1748915089041
+    modified: 1748915089041
+    isPrivate: false
