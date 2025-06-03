@@ -1,2 +1,4 @@
-José Andrés Valdés Jacobo 00005822
-Graciela María Osegueda Hernández 00153822
+| Nombre    | Carnet |
+| -------- | ------- |
+| José Andrés Valdés Jacobo  | 00005822    |
+| Graciela María Osegueda Hernández | 00153822     |
